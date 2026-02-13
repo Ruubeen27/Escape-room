@@ -1,0 +1,65 @@
+/* Fuente de fontspace.com, sólo para uso personal */
+@font-face {
+  font-family: "ComicKids-WyvKG";
+  src: url("../fonts/ComicKids-WyvKG.otf");
+}
+body {
+  background: radial-gradient(#712424, #2c337b);
+}
+/* FIJAMOS el ancho y la posición de la escena y de los mensajes */
+.escena, .mensaje {
+  width: 480px;
+  margin: auto;
+}
+/* La escena tendrá como fondo la mansión, ¡¡ sólo al cargar la página !! */
+.escena {
+  height: 784px;
+  margin: auto;
+  background-image: url("../img/mansion.jpg"); /* Imagen de Wombo Dream */
+  background-size:cover;
+  position: relative;
+}
+.mensaje {
+  font-family: "ComicKids-WyvKG";
+  background-color: white;
+  padding: 3px;
+}
+
+.mensaje p {
+  margin-left: 10px;
+}
+
+.puerta {
+  width: 14px;
+  height: 49px;
+  background-color: transparent;
+  position: absolute;
+  left:304px;
+  top: 479px;
+}
+.interruptor {
+  display: none; /* Inicialmente no se verá el interruptor */
+  width: 16px;
+  height: 34px;
+  background-image: url("../img/interruptor_oscuro.png"); /* Imagen de Wombo Dream manipulada con GIMP */
+  background-size: cover;
+  position: absolute;
+  left:385px;
+  top: 402px;
+}
+/* Coloca la pata en la escena de forma discreta, que no se vea fácil*/
+.pata {
+  display: none; /* Inicialmente no se verá la pata */
+  width: 11px;
+  height: 12px;
+  background-image: url("../img/pata.png"); /* Imagen de Wombo Dream manipulada con GIMP */
+  background-size: cover;
+  position: absolute;
+  left:346px;
+  top: 607px;
+}
+/* Este es Togo, visualízado encima de la alfombra */
+.togo {
+ /* PON AQUÍ EL CSS DE TOGO */
+ display: none; /* Inicialmente no se visualiza */
+}
