@@ -16,7 +16,7 @@
 // Desde ESCENA1: Al hacer click en la puerta de la mansión cambia a la escena2
 function entra() {
   // Cambio la imagen de fondo cuando entro en la mansión.
-  document.getElementById("principal").style.backgroundImage = "url(img/sotanoApagado.jpg)";
+  document.getElementById("principal").style.backgroundImage = "url(../img/Entrada-castillo.jpg)";
   // Oculto la puerta, ya no vamos a utilizarla
   document.getElementById("puerta").style.display = "none";
   // Muestro el interruptor, no se verá muy bien
