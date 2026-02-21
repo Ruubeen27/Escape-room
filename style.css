@@ -10,7 +10,7 @@ body {
 
 }
 
-#juego-cuadrado{
+#juego-cuadrado {
     width: 800px;
     border: 2px solid blue;
 
@@ -95,7 +95,7 @@ body {
 #puerta1 {
     position: absolute;
     top: 20%;
-    left:42%;
+    left: 42%;
     width: 81px;
     height: 108px;
     z-index: 20;
@@ -104,8 +104,56 @@ body {
     background-color: rgb(255, 0, 0);
 }
 
+#puerta2 {
+    position: absolute;
+    top: 20%;
+    left: 42%;
+    width: 81px;
+    height: 160px;
+    z-index: 20;
+    /* para ver donde está la puerta  
+     'transparent' */
+    background-color: rgb(255, 0, 0);
+}
+
+#boton-cuadro {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    width: 70px;
+    height: 100px;
+    z-index: 20;
+    /* para ver donde está la puerta  
+     'transparent' */
+    background-color: rgb(255, 0, 191);
+}
+
+#boton-nota {
+    position: absolute;
+    top: 27%;
+    left: 42%;
+    width: 100px;
+    height: 100px;
+    z-index: 20;
+    /* para ver donde está la puerta  
+     'transparent' */
+    background-color: rgb(255, 0, 191);
+}
+
+#boton-voltear-cuadro {
+    position: absolute;
+    top: 23%;
+    left: 21%;
+    width: 300px;
+    height: 300px;
+    z-index: 20;
+    /* para ver donde está la puerta  
+     'transparent' */
+    background-color: rgb(255, 0, 191);
+}
+
 #cofre {
- position: absolute;
+    position: absolute;
     top: 32%;
     left: 37%;
     width: 138px;
@@ -116,8 +164,9 @@ body {
     background-color: rgb(255, 0, 0);
 }
 
-#cara-estatua {
- position: absolute;
+#cara-estatua,
+#llave {
+    position: absolute;
     top: 170px;
     left: 32%;
     width: 20px;
@@ -126,18 +175,22 @@ body {
     /* para ver donde está la puerta  
      'transparent' */
     background-color: rgb(255, 0, 0);
-
+    border: none;
+    outline: none;
+    padding: 0;
 }
 
-#contenedor-puertas {
-    border: 2px solid green;
-  background-color: yellow;
+#cara-estatua:active,
+#llave:active {
+    transform: scale(1);
 }
 
-#mensaje {
+
+#mensajeNota {
     font-size: 24px;
     text-align: center;
     margin-top: 200px;
-    color: #333;
-    z-index: 10;
+    color: #000000;
+    z-index: 22;
 }
+

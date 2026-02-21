@@ -1,3 +1,5 @@
+let llaveCogida = false;
+
 function irAPantalla(idPantalla) {
 
     // ocultar todas las secciones que tengan la clase 'pantalla'
@@ -15,6 +17,37 @@ function irAPantalla(idPantalla) {
     }
 }
 
-function coger llave() {
+function cogerLlave() {
+    // Si ya se cogió la llave, no permitir cogerla de nuevo
+    if (llaveCogida) {
+        return;
+    }
+
+    const llave = document.getElementById("llave");
+    if (llave) {
+        llave.style.display = "none";
+        llaveCogida = true;
+        alert("¡Has cogido la llave!");
+        irAPantalla('sala-estatuas');
+        // Ocultar el botón cara-estatua
+        const caraEstatua = document.getElementById("cara-estatua");
+        if (caraEstatua) {
+            caraEstatua.style.display = "none";
+        }
+    }
+}
+
+function abrirCofre() {
+    if (llaveCogida) {
+        alert("¡Has abierto el cofre!");
+        irAPantalla('interior-cofre');
+    } else {
+        alert("¡Necesitas una llave para abrir el cofre!");
+    }
+}
+
+function mensajeNota() {
+    const mensajeNota = document.getElementById("mensajeNota");
+    mensajeNota.classList.remove("oculto");
     
 }
