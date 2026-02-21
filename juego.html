@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Samir y Valentina">
+    <title>Escape Room de Fondo de Bikini</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="pantalla-juego">
+
+        <section id="inicio" class="pantalla">
+            <img src="./img/Entrada-castillo.jpg" alt="Inicio" class="fondo">
+            <button id="boton-jugar" onclick="irAPantalla('castillo')">JUGAR</button>
+        </section>
+
+        <section id="castillo" class="pantalla oculto">
+            <img src="img/Puertas-colores.jpg" alt="Interior" class="fondo">
+
+            <button id="puertaA" onclick="irAPantalla('sala-reloj')">ENTRAR A LA SALA</button>
+            <button id="puertaB" onclick="irAPantalla('sala-estatuas')">ENTRAR A LA SALA</button>
+            <button id="boton-cuadro" onclick="irAPantalla('cuadro')">ENTRAR A LA SALA</button>
+        </section>
+
+
+        <section id="cuadro" class="pantalla oculto">
+            <img src="img/Cuadro-bosque-rojo.jpg" alt="Interior" class="fondo">
+
+            <button id="boton-voltear-cuadro" onclick="irAPantalla('cuadro-volteado')">ENTRAR A LA SALA</button>
+
+            <img id="volver" onclick="irAPantalla('castillo')" src="img/icono_volver.png" alt="Volver atrás">
+
+        </section>
+
+        <section id="cuadro-volteado" class="pantalla oculto">
+            <img src="img/Nota-del-cuadro.jpg" alt="Interior" class="fondo">
+
+            <button id="boton-nota" onclick="mensajeNota()">ENTRAR A LA SALA</button>
+            
+
+            <img id="volver" onclick="irAPantalla('castillo')" src="img/icono_volver.png" alt="Volver atrás">
+        </section>
+        
+      
+
+        <section id="sala-reloj" class="pantalla oculto">
+            <img src="img/Sala-Reloj.jpg" alt="Interior" class="fondo">
+            <button id="puertaA" onclick="irAPantalla('sala-cofre')">ENTRAR A LA SALA</button>
+            <button id="puertaB" onclick="irAPantalla('sala-candado')">ENTRAR A LA SALA</button>
+
+            <img id="volver" onclick="irAPantalla('castillo')" src="img/icono_volver.png" alt="Volver atrás">
+        </section>
+
+        <section id="sala-estatuas" class="pantalla oculto">
+            <button id="puertaB" onclick="irAPantalla('sala-cofre')">ENTRAR A LA SALA</button>
+            <img src="img/Estatuas.jpg" alt="Interior" class="fondo">
+            <img id="volver" onclick="irAPantalla('castillo')" src="img/icono_volver.png" alt="Volver atrás">
+            <button id="cara-estatua" onclick="irAPantalla('sala-estatuas-llave')"></button>
+
+        </section>
+
+        <section id="sala-estatuas-llave" class="pantalla oculto">
+            <button id="puertaB" onclick="irAPantalla('sala-cofre')">ENTRAR A LA SALA</button>
+            <img src="img/Estatuas-con-llave.jpg" alt="Interior" class="fondo">
+            <img id="volver" onclick="irAPantalla('sala-estatuas')" src="img/icono_volver.png" alt="Volver atrás">
+            <button id="llave" onclick="cogerLlave()"></button>
+        </section>
+
+        <section id="sala-cofre" class="pantalla oculto">
+            <button id="cofre" onclick="abrirCofre()">ENTRAR A LA SALA</button>
+            <img src="img/Sala-Cofre.jpg" alt="Interior" class="fondo">
+            <button id="puerta1" onclick="irAPantalla('sala-reloj')">ENTRAR A LA SALA</button>
+
+            <img id="volver" onclick="irAPantalla('castillo')" src="img/icono_volver.png" alt="Volver atrás">
+        </section>
+
+        <section id="interior-cofre" class="pantalla oculto">
+            <button id="cofre" onclick="irAPantalla('sala-cofre')">ENTRAR A LA SALA</button>
+            <img src="img/Cofre-Manecillas.jpg" alt="Interior" class="fondo">
+
+        </section>
+
+        <section id="sala-candado" class="pantalla oculto">
+            <img src="img/Candado.jpg" alt="Interior" class="fondo">
+            <button id="puerta2" onclick="irAPantalla('salida')">ENTRAR A LA SALA</button>
+        </section>
+
+        <section id="salida" class="pantalla oculto">
+            <img src="img/Salida .jpg" alt="Interior" class="fondo">
+
+        </section>
+
+    </div>
+
+    <div id ="textos" class="oculto">
+          <p id="mensajeNota" class="oculto">Pon las manecillas del reloj en la posición correcta para abrir la puerta.</p>
+
+    </div>
+    <script src="javascript.js"></script>
+</body>
+
+</html>
