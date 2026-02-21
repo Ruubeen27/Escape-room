@@ -34,13 +34,23 @@ body {
     object-fit: cover;
 }
 
+#volver {
+    position: absolute;
+    top: 440px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 10;
+}
+
 #boton-jugar {
     position: absolute;
-    bottom: 500px;
-    left: 50%;
+    bottom: 300px;
+    left: 44%;
     /* Tamaño boton */
-    width: 180px;
-    height: 60px;
+    width: 60px;
+    height: 140px;
     /* invisible para que se no se vea*/
     background: red;
     border: none;
@@ -58,17 +68,65 @@ body {
     display: none !important;
 }
 
-
 #puertaA {
     position: absolute;
-    top: 33%;
-    left: 7%;
-    width: 110px;
-    height: 260px;
+    top: 17%;
+    left: 25%;
+    width: 80px;
+    height: 200px;
     z-index: 20;
     /* para ver donde está la puerta  
      'transparent' */
     background-color: blue;
+}
+
+#puertaB {
+    position: absolute;
+    top: 17%;
+    left: 59%;
+    width: 80px;
+    height: 200px;
+    z-index: 20;
+    /* para ver donde está la puerta  
+     'transparent' */
+    background-color: rgb(255, 0, 0);
+}
+
+#puerta1 {
+    position: absolute;
+    top: 20%;
+    left:42%;
+    width: 81px;
+    height: 108px;
+    z-index: 20;
+    /* para ver donde está la puerta  
+     'transparent' */
+    background-color: rgb(255, 0, 0);
+}
+
+#cofre {
+ position: absolute;
+    top: 32%;
+    left: 37%;
+    width: 138px;
+    height: 75px;
+    z-index: 20;
+    /* para ver donde está la puerta  
+     'transparent' */
+    background-color: rgb(255, 0, 0);
+}
+
+#cara-estatua {
+ position: absolute;
+    top: 170px;
+    left: 32%;
+    width: 20px;
+    height: 20px;
+    z-index: 20;
+    /* para ver donde está la puerta  
+     'transparent' */
+    background-color: rgb(255, 0, 0);
+
 }
 
 #contenedor-puertas {
@@ -83,4 +141,3 @@ body {
     color: #333;
     z-index: 10;
 }
-
