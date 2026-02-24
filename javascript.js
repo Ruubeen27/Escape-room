@@ -1,4 +1,5 @@
 let llaveCogida = false;
+let manecillasCogidas = false;
 
 function irAPantalla(idPantalla) {
 
@@ -37,6 +38,26 @@ function cogerLlave() {
     }
 }
 
+function cogerManecillas() {
+    // Si ya se cogió las manecillas, no permitir cogerla de nuevo
+    if (manecillasCogidas) {
+        return;
+    }
+
+    const manecillas = document.getElementById("manecillas");
+    if (manecillas) {
+        manecillas.style.display = "none";
+        manecillasCogidas = true;
+        alert("¡Has cogido las manecillas");
+        irAPantalla('sala-cofre');
+        // Ocultar el botón cofre
+        const interiorCofre = document.getElementById("cofre");
+        if (interiorCofre) {
+            interiorCofre.style.display = "none";
+        }
+    }
+}
+
 function abrirCofre() {
     if (llaveCogida) {
         alert("¡Has abierto el cofre!");
@@ -48,6 +69,6 @@ function abrirCofre() {
 
 function mensajeNota() {
     const mensajeNota = document.getElementById("mensajeNota");
-    mensajeNota.classList.remove("oculto");
+    alert("Provisional");
     
 }
