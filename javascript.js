@@ -1,5 +1,6 @@
 let llaveCogida = false;
 let manecillasCogidas = false;
+let manecillasEn9 = false;
 
 function irAPantalla(idPantalla) {
 
@@ -67,8 +68,22 @@ function abrirCofre() {
     }
 }
 
+function pruebaReloj() {
+    let puertaBReloj = document.getElementById(puertaBReloj);
+    if (manecillasCogidas) {
+        if (manecillasEn9) {
+            alert("¡Resolviste el acertijo!");
+            puertaBReloj.classList.remove('oculto');
+        }
+    } else {
+        alert("¡Necesitas unas manecillas!");
+    }
+}
+
+
+
 function mensajeNota() {
     const mensajeNota = document.getElementById("mensajeNota");
     alert("Provisional");
-    
+
 }
