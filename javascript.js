@@ -21,7 +21,6 @@ function irAPantalla(idPantalla) {
 }
 
 function cogerLlave() {
-    // Si ya se cogió la llave, no permitir cogerla de nuevo
     if (llaveCogida) {
         return;
     }
@@ -32,7 +31,7 @@ function cogerLlave() {
         llaveCogida = true;
         alert("¡Has cogido la llave!");
         irAPantalla('sala-estatuas');
-        // Ocultar el botón cara-estatua
+
         const caraEstatua = document.getElementById("cara-estatua");
         if (caraEstatua) {
             caraEstatua.style.display = "none";
@@ -41,7 +40,7 @@ function cogerLlave() {
 }
 
 function cogerManecillas() {
-    // Si ya se cogió las manecillas, no permitir cogerla de nuevo
+
     if (manecillasCogidas) {
         return;
     }
@@ -50,9 +49,9 @@ function cogerManecillas() {
     if (manecillas) {
         manecillas.style.display = "none";
         manecillasCogidas = true;
-       
+
         irAPantalla('sala-cofre');
-        // Ocultar el botón cofre
+
         const interiorCofre = document.getElementById("cofre");
         if (interiorCofre) {
             interiorCofre.style.display = "none";
@@ -62,7 +61,7 @@ function cogerManecillas() {
 
 function abrirCofre() {
     if (llaveCogida) {
-       
+        mensajeCofre();
         irAPantalla('interior-cofre');
     } else {
         alert("¡Necesitas una llave para abrir el cofre!");
@@ -84,7 +83,7 @@ function pruebaReloj() {
 
 function codigoCandado() {
     const codigo = prompt("Introduce el código de 4 dígitos:");
-    if (codigo === "1234") {
+    if (codigo === "369") {
         alert("¡Código correcto! Has abierto la puerta.");
         irAPantalla('salida');
     } else {
@@ -95,33 +94,32 @@ function mensajeEntrada() {
     let mensaje = document.getElementById("mensaje");
     irAPantalla('castillo');
     mensaje.classList.remove("oculto");
-    mensaje.textContent = "¡Bienvenido al Escape Room! Explora las habitaciones y resuelve los acertijos para escapar.";
+    mensaje.textContent = "Bienvenidos al último lugar del que querríais formar parte. Las paredes guardan secretos y cada rincón es una pieza de un rompecabezas que no perdona errores. Buscad, razonad y, sobre todo, confiad en vuestro instinto... o quedaos aquí para siempre.";
 }
 
 function mensajeNota() {
     let mensaje = document.getElementById("mensaje");
     mensaje.classList.remove("oculto");
-    mensaje.textContent = "¡Has leído la nota! El código del candado es 1234.";
+    mensaje.textContent = "Soy una escalera que sube de tres en tres. Mi primer paso es un triangulo, mi segundo es media docena, y el ultimo es el final del dia en el reloj que ya conoces.";
 }
 
 function mensajeEstatuas() {
     let mensaje = document.getElementById("mensaje");
     irAPantalla('sala-estatuas');
     mensaje.classList.remove("oculto");
-    mensaje.textContent = "¡Has entrado en la sala de las estatuas! Busca pistas para encontrar la llave.";
+    mensaje.textContent = "Estas a tan solo una caricia en la megilla para encontrar la llave";
 }
-
 
 function mensajeCofre() {
     let mensaje = document.getElementById("mensaje");
     irAPantalla('sala-cofre');
     mensaje.classList.remove("oculto");
-    mensaje.textContent = "¡Has encontrado el cofre! Usa la llave para abrirlo y coger las manecillas.";
+    mensaje.textContent = "¡Has encontrado el cofre! Usa la llave para abrirlo";
 }
 
 function mensajeInteriorCofre() {
     let mensaje = document.getElementById("mensaje");
-   abrirCofre();
+    abrirCofre();
     mensaje.classList.remove("oculto");
     mensaje.textContent = "¡Has abierto el cofre! Has encontrado las manecillas del reloj.";
 
@@ -129,12 +127,25 @@ function mensajeInteriorCofre() {
 
 function mensajeReloj() {
     let mensaje = document.getElementById("mensaje");
-     irAPantalla('sala-reloj');
+    irAPantalla('sala-reloj');
     mensaje.classList.remove("oculto");
-    mensaje.textContent = "¡Aqui encontraras el acertijo del reloj!";
-   
+    mensaje.textContent = "¡Para cruzar el umbral, el tiempo debe detenerse donde el día se consume. Tres veces nació la luz, tres veces creció el calor y tres veces descendió el frío. Suma los ciclos para hallar el final!";
+
 }
 
+function mensajeCandado() {
+    let mensaje = document.getElementById("mensaje");
+    irAPantalla('sala-candado');
+    mensaje.classList.remove("oculto");
+    mensaje.textContent = "La cerradura no cede ante la fuerza, sino ante la verdad. Si buscas la llave de números, deberás seguir el rastro de las hojas carmesí hasta donde el Bosque Rojo exhala su último suspiro. Allí, el final te revelará el camino.";
+}
+
+function mensajeFinal() {
+    let mensaje = document.getElementById("mensaje");
+    irAPantalla('sala-candado');
+    mensaje.classList.remove("oculto");
+    mensaje.textContent = "El silencio por fin recupera su lugar. Habéis descifrado los latidos del reloj y sobrevivido a las sombras del Bosque Rojo. La puerta se abre, pero los secretos que habéis descubierto os acompañarán siempre. Salid antes de que el tiempo decida arrepentirse.";
+}
 
 function borrarMensaje() {
     let mensaje = document.getElementById("mensaje");

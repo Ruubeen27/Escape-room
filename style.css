@@ -9,13 +9,14 @@ body {
     background: url("img/bosque_oscuro.jpg");
 
 }
+
 #contenedor-maestro {
     display: flex;
     flex-direction: column;
     align-items: center;
-   
     width: 500px; 
-    border: 5px solid red; 
+ 
+}
 
 #pantalla-juego {
     width: 500px;
@@ -46,7 +47,7 @@ body {
 
 #volver {
     position: absolute;
-    top: 440px;
+    top: 400px;
     left: 20px;
     width: 40px;
     height: 40px;
@@ -55,21 +56,14 @@ body {
 }
 
 #boton-jugar {
+    background: transparent;
+    border: none;
     position: absolute;
     top: 60%;
     left: 44%;
-    /* Tamaño boton */
     width: 60px;
     height: 140px;
-    /* invisible para que se no se vea*/
-    background: red;
-
     z-index: 10;
-}
-
-#boton-jugar:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 15px;
 }
 
 .oculto {
@@ -77,138 +71,133 @@ body {
 }
 
 #puertaA {
+   background: transparent;
+    border: none;
     position: absolute;
     top: 30%;
     left: 25%;
     width: 80px;
     height: 200px;
     z-index: 20;
-    /* para ver donde está la puerta  
-     'transparent' */
-    background-color: blue;
 }
 
 #puertaB,
 #puertaBReloj {
+    background: transparent;
+    border: none;
     position: absolute;
     top: 30%;
     left: 59%;
     width: 80px;
     height: 200px;
     z-index: 20;
-    /* para ver donde está la puerta  
-     'transparent' */
-    background-color: rgb(255, 0, 0);
+    
 }
 
 #boton9 {
+    background: transparent;
+    border: none;
     position: absolute;
     top: 31%;
     left: 45%;
     width: 7px;
     height: 8px;
     z-index: 20;
-    /* para ver donde está la puerta  
-     'transparent' */
-    background-color: rgb(255, 0, 0);
-
 }
 
 #puerta1 {
+    background: transparent;
+    border: none;
     position: absolute;
     top: 35%;
     left: 42%;
     width: 81px;
     height: 108px;
     z-index: 20;
-    /* para ver donde está la puerta  
-     'transparent' */
-    background-color: rgb(255, 0, 0);
+   
 }
 
 #puerta2 {
+    background: transparent;
+    border: none;
     position: absolute;
     top: 35%;
     left: 42%;
     width: 81px;
     height: 160px;
     z-index: 20;
-    /* para ver donde está la puerta  
-     'transparent' */
-    background-color: rgb(255, 0, 0);
+    
 }
 
 #boton-cuadro {
+    background: transparent;
+    border: none;
     position: absolute;
     top: 28%;
     left: 5%;
     width: 70px;
     height: 100px;
     z-index: 20;
-    /* para ver donde está la puerta  
-     'transparent' */
-    background-color: rgb(255, 0, 191);
+   
 }
 
 #boton-nota {
+    background: transparent;
+    border: none;
     position: absolute;
     top: 33%;
     left: 42%;
     width: 100px;
     height: 100px;
-    z-index: 20;
-    /* para ver donde está la puerta  
-     'transparent' */
-    background-color: rgb(255, 0, 191);
+    z-index: 20;/
+   
 }
 
 #boton-voltear-cuadro {
+    background: transparent;
+    border: none;
     position: absolute;
     top: 27%;
     left: 21%;
     width: 300px;
     height: 300px;
     z-index: 20;
-    /* para ver donde está la puerta  
-     'transparent' */
-    background-color: rgb(255, 0, 191);
+  
 }
 
 #cofre {
+    background: transparent;
+    border: none;
     position: absolute;
     top: 58%;
     left: 37%;
     width: 138px;
     height: 75px;
     z-index: 20;
-    /* para ver donde está la puerta  
-     'transparent' */
-    background-color: rgb(255, 0, 0);
+   
 }
 
 #manecillas {
+    background: transparent;
+    border: none;
     position: absolute;
     top: 52%;
     left: 37%;
     width: 138px;
     height: 75px;
     z-index: 20;
-    /* para ver donde está la puerta  
-     'transparent' */
-    background-color: rgb(255, 0, 0);
 }
 
 #cara-estatua,
 #llave {
+    background: transparent;
+    border: none;
     position: absolute;
     top: 170px;
     left: 32%;
     width: 20px;
     height: 20px;
     z-index: 20;
-    /* para ver donde está la puerta  
-     'transparent' */
-    background-color: rgb(255, 0, 0);
     border: none;
     outline: none;
     padding: 0;
@@ -218,18 +207,17 @@ body {
     width: 500px;
     min-height: 50px;
     background-color: rgba(196, 196, 196, 0.8);
-    color: white;
-     position: absolute;
-    top: 58%;
+    position: absolute;
+    top: 63%;
 }
 
 #mensaje {
-    color: white;
+    color: rgb(80, 10, 10);
     font-family: sans-serif;
     font-size: 1.1rem;
     margin: 0;
     z-index: 31;
-    margin: 0; /* Quita el espacio automático del párrafo */
+    margin: 0; 
     padding: 10px;
     text-align: center;
 }
