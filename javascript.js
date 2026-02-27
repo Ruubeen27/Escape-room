@@ -84,7 +84,7 @@ function pruebaReloj() {
 }
 
 function codigoCandado() {
-    const codigo = prompt("Introduce el código de 4 dígitos:");
+    const codigo = prompt("Introduce el código:");
     if (codigo === "369") {
         alert("¡Código correcto! Has abierto la puerta.");
         irAPantalla('salida');
