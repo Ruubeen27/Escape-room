@@ -15,7 +15,7 @@
 
             <section id="inicio" class="pantalla">
                 <img src="./img/Entrada-castillo.jpg" alt="Inicio" class="fondo">
-                <button id="boton-jugar" onclick="mensajeEntrada()">JUGAR</button>
+                <button id="boton-jugar" onclick="mensajeEntrada()"></button>
             </section>
 
             <section id="salida" class="pantalla oculto">
@@ -26,7 +26,7 @@
             <section id="cuadro" class="pantalla oculto">
                 <img src="img/Cuadro-bosque-rojo.jpg" alt="Interior" class="fondo">
 
-                <button id="boton-voltear-cuadro" onclick="irAPantalla('cuadro-volteado')">ENTRAR A LA SALA</button>
+                <button id="boton-voltear-cuadro" onclick="irAPantalla('cuadro-volteado')"></button>
 
                 <img id="volver" onclick="irAPantalla('castillo')" src="img/icono_volver.png" alt="Volver atrás">
 
@@ -35,7 +35,7 @@
             <section id="cuadro-volteado" class="pantalla oculto">
                 <img src="img/Nota-del-cuadro.jpg" alt="Interior" class="fondo">
 
-                <button id="boton-nota" onclick="mensajeNota()">ENTRAR A LA SALA</button>
+                <button id="boton-nota" onclick="mensajeNota()"></button>
 
 
                 <img id="volver" onclick="irAPantalla('castillo')" src="img/icono_volver.png" alt="Volver atrás">
@@ -47,22 +47,22 @@
             <section id="castillo" class="pantalla oculto">
                 <img src="img/Puertas-colores.jpg" alt="Interior" class="fondo">
 
-                <button id="puertaA" onclick="mensajeReloj()">ENTRAR A LA SALA</button>
-                <button id="puertaB" onclick="mensajeEstatuas()">ENTRAR A LA SALA</button>
-                <button id="boton-cuadro" onclick="irAPantalla('cuadro')">ENTRAR A LA SALA</button>
+                <button id="puertaA" onclick="mensajeReloj()"></button>
+                <button id="puertaB" onclick="mensajeEstatuas()"></button>
+                <button id="boton-cuadro" onclick="irAPantalla('cuadro')"></button>
             </section>
 
             <section id="sala-reloj" class="pantalla oculto">
                 <img src="img/Sala-Reloj.jpg" alt="Interior" class="fondo">
-                <button id="puertaA" onclick="irAPantalla('sala-cofre')">ENTRAR A LA SALA</button>
-                <button id="puertaBReloj" onclick="irAPantalla('sala-candado')" class="oculto">ENTRAR A LA SALA</button>
+                <button id="puertaA" onclick="mensajeCofre()"></button>
+                <button id="puertaBReloj" onclick="mensajeCandado()" class="oculto"></button>
                 <button id="boton9" onclick="pruebaReloj()"></button>
                 <img id="volver" onclick="irAPantalla('castillo')" src="img/icono_volver.png">
 
             </section>
 
             <section id="sala-estatuas" class="pantalla oculto">
-                <button id="puertaB" onclick="mensajeCofre()">ENTRAR A LA SALA</button>
+                <button id="puertaB" onclick="mensajeCofre()"></button>
                 <img src="img/Estatuas.jpg" alt="Interior" class="fondo">
                 <img id="volver" onclick="irAPantalla('castillo')" src="img/icono_volver.png" alt="Volver atrás">
                 <button id="cara-estatua" onclick="irAPantalla('sala-estatuas-llave')"></button>
@@ -70,17 +70,18 @@
             </section>
 
             <section id="sala-estatuas-llave" class="pantalla oculto">
-                <button id="puertaB" onclick="irAPantalla('sala-cofre')">ENTRAR A LA SALA</button>
+                <button id="puertaB" onclick="irAPantalla('sala-cofre')"></button>
                 <img src="img/Estatuas-con-llave.jpg" alt="Interior" class="fondo">
                 <img id="volver" onclick="irAPantalla('sala-estatuas')" src="img/icono_volver.png" alt="Volver atrás">
                 <button id="llave" onclick="cogerLlave()"></button>
             </section>
 
             <section id="sala-cofre" class="pantalla oculto">
-                <button id="cofre" onclick="mensajeInteriorCofre()">ENTRAR A LA SALA</button>
+                <button id="cofre" onclick="irAPantalla('interior-cofre')"></button>
 
                 <img src="img/Sala-Cofre.jpg" alt="Interior" class="fondo">
-                <button id="puerta1" onclick="irAPantalla('sala-reloj')">ENTRAR A LA SALA</button>
+
+                <button id="puerta1" onclick="mensajeReloj()"></button>
 
                 <img id="volver" onclick="irAPantalla('sala-estatuas')" src="img/icono_volver.png" alt="Volver atrás">
             </section>
@@ -93,7 +94,7 @@
 
             <section id="sala-candado" class="pantalla oculto">
                 <img src="img/Candado.jpg" alt="Interior" class="fondo">
-                <button id="puerta2" onclick="codigoCandado()">ENTRAR A LA SALA</button>
+                <button id="puerta2" onclick="codigoCandado()"></button>
                 <img id="volver" onclick="irAPantalla('sala-reloj')" src="img/icono_volver.png" alt="Volver atrás">
             </section>
         </div>
