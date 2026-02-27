@@ -6,7 +6,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("img/bosque_oscuro.jpg");
+    background-image: url("img/bosque_oscuro.jpg");
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
 }
 
@@ -14,8 +18,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 500px; 
- 
+    width: 500px;
 }
 
 #pantalla-juego {
@@ -71,7 +74,7 @@ body {
 }
 
 #puertaA {
-   background: transparent;
+    background: transparent;
     border: none;
     position: absolute;
     top: 30%;
@@ -91,7 +94,7 @@ body {
     width: 80px;
     height: 200px;
     z-index: 20;
-    
+
 }
 
 #boton9 {
@@ -114,7 +117,7 @@ body {
     width: 81px;
     height: 108px;
     z-index: 20;
-   
+
 }
 
 #puerta2 {
@@ -126,7 +129,7 @@ body {
     width: 81px;
     height: 160px;
     z-index: 20;
-    
+
 }
 
 #boton-cuadro {
@@ -138,7 +141,7 @@ body {
     width: 70px;
     height: 100px;
     z-index: 20;
-   
+
 }
 
 #boton-nota {
@@ -150,7 +153,6 @@ body {
     width: 100px;
     height: 100px;
     z-index: 20;/
-   
 }
 
 #boton-voltear-cuadro {
@@ -162,7 +164,7 @@ body {
     width: 300px;
     height: 300px;
     z-index: 20;
-  
+
 }
 
 #cofre {
@@ -174,7 +176,7 @@ body {
     width: 138px;
     height: 75px;
     z-index: 20;
-   
+
 }
 
 #manecillas {
@@ -217,7 +219,7 @@ body {
     font-size: 1.1rem;
     margin: 0;
     z-index: 31;
-    margin: 0; 
+    margin: 0;
     padding: 10px;
     text-align: center;
 }
