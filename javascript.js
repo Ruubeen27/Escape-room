@@ -61,7 +61,6 @@ function cogerManecillas() {
 
 function abrirCofre() {
     if (llaveCogida) {
-        mensajeCofre();
         irAPantalla('interior-cofre');
     } else {
         alert("¡Necesitas una llave para abrir el cofre!");
@@ -86,6 +85,7 @@ function codigoCandado() {
     if (codigo === "369") {
         alert("¡Código correcto! Has abierto la puerta.");
         irAPantalla('salida');
+        mensajeFinal();
     } else {
         alert("Código incorrecto. Inténtalo de nuevo.");
     }
