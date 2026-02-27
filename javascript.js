@@ -51,7 +51,7 @@ function cogerManecillas() {
         manecillasCogidas = true;
 
         irAPantalla('sala-cofre');
-
+        alert("¡Has cogido las manecillas del reloj!");
         const interiorCofre = document.getElementById("cofre");
         if (interiorCofre) {
             interiorCofre.style.display = "none";
@@ -62,6 +62,9 @@ function cogerManecillas() {
 function abrirCofre() {
     if (llaveCogida) {
         irAPantalla('interior-cofre');
+        mensajeInteriorCofre();
+
+
     } else {
         alert("¡Necesitas una llave para abrir el cofre!");
     }
@@ -107,7 +110,7 @@ function mensajeEstatuas() {
     let mensaje = document.getElementById("mensaje");
     irAPantalla('sala-estatuas');
     mensaje.classList.remove("oculto");
-    mensaje.textContent = "Estas a tan solo una caricia en la megilla para encontrar la llave";
+    mensaje.textContent = "Estas a tan solo una caricia en la mejilla izquierda para encontrar la llave";
 }
 
 function mensajeCofre() {
@@ -119,7 +122,6 @@ function mensajeCofre() {
 
 function mensajeInteriorCofre() {
     let mensaje = document.getElementById("mensaje");
-    abrirCofre();
     mensaje.classList.remove("oculto");
     mensaje.textContent = "¡Has abierto el cofre! Has encontrado las manecillas del reloj.";
 
