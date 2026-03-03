@@ -84,7 +84,7 @@ function pruebaReloj() {
 }
 
 function codigoCandado() {
-    const codigo = prompt("Introduce el código de 4 dígitos:");
+    const codigo = prompt("Introduce el código:");
     if (codigo === "369") {
         alert("¡Código correcto! Has abierto la puerta.");
         irAPantalla('salida');
@@ -144,7 +144,7 @@ function mensajeCandado() {
 
 function mensajeFinal() {
     let mensaje = document.getElementById("mensaje");
-    irAPantalla('sala-candado');
+    irAPantalla('salida');
     mensaje.classList.remove("oculto");
     mensaje.textContent = "El silencio por fin recupera su lugar. Habéis descifrado los latidos del reloj y sobrevivido a las sombras del Bosque Rojo. La puerta se abre, pero los secretos que habéis descubierto os acompañarán siempre. Salid antes de que el tiempo decida arrepentirse.";
 }
